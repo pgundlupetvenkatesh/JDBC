@@ -19,7 +19,7 @@ public class ConnectToOrcl {
 	@Test
 	public void jdbc() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection cins570 = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "<user_name>", "<password>");
+		Connection cins570 = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "<username>", "<password>");
 		Statement stmt = cins570.createStatement();
 		ResultSet rs = stmt.executeQuery("select * from employees");
 		ArrayList<String> al = new ArrayList<String>();
